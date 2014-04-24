@@ -9,6 +9,7 @@ set softtabstop=2
 set expandtab
 set number
 set backspace=2 " make backspace work like most other apps
+set hlsearch
 
 nmap , \
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
