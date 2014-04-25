@@ -16,12 +16,24 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
-[submodule "bundle/unimpaired"]
-	path = bundle/unimpaired
-	url = git://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/vim-jade"]
 	path = bundle/vim-jade
 	url = git@github.com:digitaltoad/vim-jade.git
 [submodule "bundle/command-T"]
 	path = bundle/command-T
 	url = git@github.com:wincent/Command-T.git
+[submodule "bundle/ack-vim"]
+	path = bundle/ack-vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = git@github.com:garbas/vim-snipmate.git
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
