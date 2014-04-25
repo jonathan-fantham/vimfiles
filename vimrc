@@ -15,7 +15,6 @@ nmap , \
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <LocalLeader>t :CtrlP<CR>
 imap <C-L> <SPACE>=><SPACE>
 
 colorscheme github
