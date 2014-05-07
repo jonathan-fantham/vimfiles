@@ -15,9 +15,17 @@ set noswapfile
 set nofoldenable " turn off folding
 
 nmap , \
+
+" nerd tree
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+
+" command-p
+map <silent> <LocalLeader>t :CtrlP<CR>
+map <silent> <LocalLeader>b :CtrlPBuffer<CR>
+
+" a snippit
 imap <C-L> <SPACE>=><SPACE>
 
 map <silent> <LocalLeader>n :bn<CR>

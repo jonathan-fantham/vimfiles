@@ -19,9 +19,6 @@
 [submodule "bundle/vim-jade"]
 	path = bundle/vim-jade
 	url = git@github.com:digitaltoad/vim-jade.git
-[submodule "bundle/command-T"]
-	path = bundle/command-T
-	url = git@github.com:wincent/Command-T.git
 [submodule "bundle/ack-vim"]
 	path = bundle/ack-vim
 	url = git@github.com:mileszs/ack.vim.git
@@ -37,3 +34,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git
