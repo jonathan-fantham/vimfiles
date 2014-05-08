@@ -18,5 +18,7 @@ $ cd ~/.vim
 $ git submodule init
 $ git submodule update
 ```
+## Notes
 
-notes: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+Useful snippet files: [ruby](https://github.com/honza/vim-snippets/blob/master/snippets/ruby.snippets), [erb](https://github.com/honza/vim-snippets/blob/master/snippets/eruby.snippets), [haml](https://github.com/honza/vim-snippets/blob/master/snippets/haml.snippets).
+
