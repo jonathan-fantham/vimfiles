@@ -10,9 +10,12 @@ set expandtab
 set number
 set backspace=2 " make backspace work like most other apps
 set hlsearch
+set nofoldenable " turn off folding
+set hidden " prevent unsaved warnings when switching buffers
+
+" stop vim saving annoying extra files
 set nobackup
 set noswapfile
-set nofoldenable " turn off folding
 
 nmap , \
 
@@ -25,8 +28,8 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
 
-" a snippit
-imap <C-L> <SPACE>=><SPACE>
+" clear unwanted whitespace
+map <silent> <LocalLeader>w :FixWhitespace<CR>
 
 map <silent> <LocalLeader>n :bn<CR>
 map <silent> <LocalLeader>p :bp<CR>
