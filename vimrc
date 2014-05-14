@@ -36,4 +36,4 @@ map <silent> <LocalLeader>n :bn<CR>
 map <silent> <LocalLeader>p :bp<CR>
 map <silent> <LocalLeader>d :bd<CR>
 
-colorscheme github
+colorscheme Tomorrow
