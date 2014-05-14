@@ -12,6 +12,7 @@ set backspace=2 " make backspace work like most other apps
 set hlsearch
 set nofoldenable " turn off folding
 set hidden " prevent unsaved warnings when switching buffers
+set autoread " autoload files when they're changed underneath vim
 
 " stop vim saving annoying extra files
 set nobackup
