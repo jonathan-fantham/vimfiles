@@ -19,6 +19,9 @@ set noswapfile
 
 nmap , \
 
+" turn numbers on and off
+map <silent> <LocalLeader>nu :set invnumber<CR>
+
 " nerd tree
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
