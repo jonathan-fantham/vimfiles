@@ -13,6 +13,10 @@ set nofoldenable " turn off folding
 set hidden " prevent unsaved warnings when switching buffers
 set autoread " autoload files when they're changed underneath vim
 
+" always show the file name at the bottom
+set laststatus=2
+set statusline+=%F
+
 " stop vim saving annoying extra files
 set nobackup
 set noswapfile
@@ -39,3 +43,4 @@ map <silent> <LocalLeader>p :bp<CR>
 map <silent> <LocalLeader>d :bd<CR>
 
 colorscheme Tomorrow
+highlight Normal ctermbg=None
