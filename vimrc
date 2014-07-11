@@ -17,6 +17,10 @@ set autoread " autoload files when they're changed underneath vim
 set laststatus=2
 set statusline+=%F
 
+" make splits more natural
+set splitbelow
+set splitright
+
 " stop vim saving annoying extra files
 set nobackup
 set noswapfile
