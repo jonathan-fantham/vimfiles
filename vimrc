@@ -27,6 +27,12 @@ set noswapfile
 
 nmap , \
 
+" better j,k
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
 " turn numbers on and off
 map <silent> <LocalLeader>nu :set invnumber<CR>
 
