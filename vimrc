@@ -40,6 +40,7 @@ map <silent> <LocalLeader>nu :set invnumber<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen=1
 
 " command-p
 map <silent> <LocalLeader>t :CtrlP<CR>
