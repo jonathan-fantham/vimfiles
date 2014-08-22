@@ -45,6 +45,7 @@ let NERDTreeQuitOnOpen=1
 " command-p
 map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
+let g:ctrlp_custom_ignore = 'reports\/.*$'
 
 " clear unwanted whitespace
 map <silent> <LocalLeader>w :FixWhitespace<CR>
