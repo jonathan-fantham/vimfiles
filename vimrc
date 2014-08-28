@@ -12,6 +12,7 @@ set hlsearch
 set nofoldenable " turn off folding
 set hidden " prevent unsaved warnings when switching buffers
 set autoread " autoload files when they're changed underneath vim
+set ignorecase " ignore case when searching
 
 " always show the file name at the bottom
 set laststatus=2
