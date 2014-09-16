@@ -51,6 +51,9 @@ let g:ctrlp_custom_ignore = 'reports\/.*$'
 " clear unwanted whitespace
 map <silent> <LocalLeader>w :FixWhitespace<CR>
 
+" markdown
+let g:vim_markdown_folding_disabled=1
+
 map <silent> <LocalLeader>n :bn<CR>
 map <silent> <LocalLeader>p :bp<CR>
 map <silent> <LocalLeader>d :bd<CR>
