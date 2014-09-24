@@ -35,6 +35,7 @@ noremap gj j
 noremap gk k
 
 " turn numbers on and off
+set number
 map <silent> <LocalLeader>nu :set invnumber<CR>
 
 " nerd tree
