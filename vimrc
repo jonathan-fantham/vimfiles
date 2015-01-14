@@ -60,5 +60,5 @@ map <silent> <LocalLeader>n :bn<CR>
 map <silent> <LocalLeader>p :bp<CR>
 map <silent> <LocalLeader>d :bd<CR>
 
-colorscheme Tomorrow
 highlight Normal ctermbg=None
+colorscheme Tomorrow
