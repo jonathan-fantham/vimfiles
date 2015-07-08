@@ -36,6 +36,8 @@ noremap k gk
 noremap gj j
 noremap gk k
 
+set scrolloff=99
+
 " turn numbers on and off
 set number
 map <silent> <LocalLeader>nu :set invnumber<CR>
@@ -59,6 +61,9 @@ let g:vim_markdown_folding_disabled=1
 map <silent> <LocalLeader>n :bn<CR>
 map <silent> <LocalLeader>p :bp<CR>
 map <silent> <LocalLeader>d :bd<CR>
+
+" Enable jumping to the end of ruby do/end blocks with % key
+runtime! macros/matchit.vim
 
 highlight Normal ctermbg=None
 colorscheme Tomorrow
