@@ -67,3 +67,4 @@ runtime! macros/matchit.vim
 
 highlight Normal ctermbg=None
 colorscheme Tomorrow
+hi Search ctermbg=045
