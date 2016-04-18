@@ -47,10 +47,12 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
-" command-p
-map <silent> <LocalLeader>t :CtrlP<CR>
-map <silent> <LocalLeader>b :CtrlPBuffer<CR>
-let g:ctrlp_custom_ignore = 'reports\/.*$'
+" map ,t and ,b to fzf
+map <silent> <LocalLeader>t :Files<CR>
+map <silent> <LocalLeader>b :Buffers<CR>
+
+" tell fzf to respect gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 " clear unwanted whitespace
 map <silent> <LocalLeader>w :FixWhitespace<CR>
