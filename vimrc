@@ -28,7 +28,10 @@ set splitright
 set nobackup
 set noswapfile
 
-nmap , \
+nmap , <leader>
+nmap ,, <leader><leader>
+nmap <space> <leader>
+nmap <space><space> <leader><leader>
 
 " better j,k
 noremap j gj
