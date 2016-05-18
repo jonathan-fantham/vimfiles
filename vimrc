@@ -53,7 +53,9 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 " command-p
 map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
-let g:ctrlp_user_command = 'ag %s -l --hidden -g ""'
+if executable("ag")
+  let g:ctrlp_user_command = 'ag %s -l --hidden -g ""'
+endif
 
 " clear unwanted whitespace
 map <silent> <LocalLeader>w :FixWhitespace<CR>
