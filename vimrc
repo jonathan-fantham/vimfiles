@@ -71,5 +71,5 @@ map <silent> <LocalLeader>d :bd<CR>
 runtime! macros/matchit.vim
 
 highlight Normal ctermbg=None
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 hi Search ctermbg=045
