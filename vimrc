@@ -3,12 +3,17 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Tabs and spaces
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+autocmd Filetype scss setlocal noexpandtab
+autocmd Filetype css setlocal noexpandtab
+
 set backspace=2 " make backspace work like most other apps
 set hlsearch
+set incsearch
 set nofoldenable " turn off folding
 set hidden " prevent unsaved warnings when switching buffers
 set autoread " autoload files when they're changed underneath vim
@@ -53,8 +58,13 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 " command-p
 map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
+
 if executable("ag")
   let g:ctrlp_user_command = 'ag %s -l --hidden -g ""'
+elseif executable("ack")
+  let g:ctrlp_user_command = 'ack %s -l --match ""'
+elseif executable("ack-grep")
+  let g:ctrlp_user_command = 'ack-grep %s -l --match ""'
 endif
 
 " clear unwanted whitespace
@@ -71,5 +81,5 @@ map <silent> <LocalLeader>d :bd<CR>
 runtime! macros/matchit.vim
 
 highlight Normal ctermbg=None
-colorscheme Tomorrow-Night
+colorscheme Tomorrow
 hi Search ctermbg=045
