@@ -8,8 +8,8 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-autocmd Filetype scss setlocal noexpandtab
-autocmd Filetype css setlocal noexpandtab
+" autocmd Filetype scss setlocal noexpandtab
+" autocmd Filetype css setlocal noexpandtab
 
 set backspace=2 " make backspace work like most other apps
 set hlsearch
