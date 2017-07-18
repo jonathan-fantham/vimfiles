@@ -60,7 +60,7 @@ map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
 
 if executable("ag")
-  let g:ctrlp_user_command = 'ag %s -l --hidden -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 elseif executable("ack")
   let g:ctrlp_user_command = 'ack %s -l --match ""'
 elseif executable("ack-grep")
@@ -83,3 +83,7 @@ runtime! macros/matchit.vim
 highlight Normal ctermbg=None
 colorscheme Tomorrow
 hi Search ctermbg=045
+
+if executable("goimports")
+  let g:go_fmt_command = "goimports"
+endif
