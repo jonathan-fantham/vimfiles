@@ -59,6 +59,17 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
 
+" vim-rspec
+map <silent> <LocalLeader>rt :call RunCurrentSpecFile()<CR>
+map <silent> <LocalLeader>ra :call RunAllSpecs()<CR>
+map <silent> <LocalLeader>rs :call RunNearestSpec()<CR>
+map <silent> <LocalLeader>rl :call RunLastSpec()<CR>
+let g:rspec_command = "!bundle exec rspec -c {spec}"
+
+" vim-go
+map <silent> <LocalLeader>gt :GoTest<CR>
+map <silent> <LocalLeader>gc :GoCoverage<CR>
+
 if executable("ag")
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 elseif executable("ack")
@@ -81,8 +92,9 @@ map <silent> <LocalLeader>d :bd<CR>
 runtime! macros/matchit.vim
 
 highlight Normal ctermbg=None
-colorscheme Tomorrow
-hi Search ctermbg=045
+colorscheme jellybeans
+set background=dark
+" hi Search ctermbg=045
 
 if executable("goimports")
   let g:go_fmt_command = "goimports"
