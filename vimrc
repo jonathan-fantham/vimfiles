@@ -1,6 +1,7 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 syntax on
+set synmaxcol=150 " prevent vim running slow on long lines due to syntax highlighting
 filetype plugin indent on
 
 " Tabs and spaces
@@ -33,6 +34,9 @@ set splitright
 set nobackup
 set noswapfile
 
+" use old regular expression engine for ruby plugin
+set re=1
+
 nmap , <leader>
 nmap ,, <leader><leader>
 nmap <space> <leader>
@@ -59,23 +63,24 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>t :CtrlP<CR>
 map <silent> <LocalLeader>b :CtrlPBuffer<CR>
 
-" vim-rspec
-map <silent> <LocalLeader>rt :call RunCurrentSpecFile()<CR>
-map <silent> <LocalLeader>ra :call RunAllSpecs()<CR>
-map <silent> <LocalLeader>rs :call RunNearestSpec()<CR>
-map <silent> <LocalLeader>rl :call RunLastSpec()<CR>
-let g:rspec_command = "!bundle exec rspec -c {spec}"
+" ack grep
+cnoreabbrev Ack Ack!
+" nnoremap <Leader>a :Ack!<Space>
+
+if executable("rg")
+  " Use ripgrep instead of grep
+  let g:ackprg = 'rg --vimgrep --hidden'
+
+  " Use ripgrep for ctrl p searches
+  let g:ctrlp_user_command = 'rg --vimgrep --hidden --files %s'
+endif
 
 " vim-go
 map <silent> <LocalLeader>gt :GoTest<CR>
 map <silent> <LocalLeader>gc :GoCoverage<CR>
 
-if executable("ag")
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-elseif executable("ack")
-  let g:ctrlp_user_command = 'ack %s -l --match ""'
-elseif executable("ack-grep")
-  let g:ctrlp_user_command = 'ack-grep %s -l --match ""'
+if executable("goimports")
+  let g:go_fmt_command = "goimports"
 endif
 
 " clear unwanted whitespace
@@ -84,18 +89,11 @@ map <silent> <LocalLeader>w :FixWhitespace<CR>
 " markdown
 let g:vim_markdown_folding_disabled=1
 
-map <silent> <LocalLeader>n :bn<CR>
-map <silent> <LocalLeader>p :bp<CR>
-map <silent> <LocalLeader>d :bd<CR>
-
 " Enable jumping to the end of ruby do/end blocks with % key
 runtime! macros/matchit.vim
 
-highlight Normal ctermbg=None
-colorscheme jellybeans
-set background=dark
+" set background=dark
+colorscheme Tomorrow
+" highlight Normal ctermbg=None
 " hi Search ctermbg=045
-
-if executable("goimports")
-  let g:go_fmt_command = "goimports"
-endif
+" hi visual term=reverse ctermbg=white
