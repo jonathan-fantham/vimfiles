@@ -13,12 +13,10 @@ $ git clone git@github.com:jonathan-fantham/vimfiles.git ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-#### Install vundle.
+#### Install vim-plug.
 
-[Step 2 here at the time of writing](https://github.com/VundleVim/Vundle.vim).
-
-Excerpt: `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+[I installed it to autoload as suggested here](https://github.com/junegunn/vim-plug#installation).
 
 #### Install Plugins.
 
-Open vim and run `:PluginInstall`
+Open vim and run `:PlugInstall`

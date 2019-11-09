@@ -1,41 +1,32 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dense-analysis/ale'
+Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
+Plug 'leafgarland/typescript-vim'
+Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'posva/vim-vue'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'vim-ruby/vim-ruby'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'fatih/vim-go'
-Plugin 'godlygeek/tabular'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'marcopaganini/termschool-vim-theme'
-Plugin 'mileszs/ack.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'posva/vim-vue'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-syntastic/syntastic'
+" colorschemes
+Plug 'junegunn/seoul256.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 " Tabs and spaces
 set tabstop=2
@@ -130,22 +121,13 @@ let g:vim_markdown_folding_disabled=1
 " Enable jumping to the end of ruby do/end blocks with % key
 runtime! macros/matchit.vim
 
-" syntastic setup
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-
-nnoremap <Leader>v :lfirst<CR>
-
 " set list
-" set listchars=tab:→\ ,nbsp:␣
+set listchars=tab:→\ ,nbsp:␣,space:·
+
+" Linting (there is also further config in ftplugin folder)
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
 
 " syntax highlighting and colorschemes
 let g:go_highlight_structs = 1
@@ -155,7 +137,8 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 syntax on
-colorscheme termschool
+colorscheme seoul256
+set background=dark
 " highlight Normal ctermbg=None
 " hi Search ctermbg=045
 " hi visual term=reverse ctermbg=white
