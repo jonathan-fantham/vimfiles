@@ -9,8 +9,8 @@ My personalised vim configuration files
 First clone the repository to the vim directory and link vimrc
 
 ```
-$ git clone git@github.com:jonathan-fantham/vimfiles.git ~/.vim
-$ ln -s ~/.vim/vimrc ~/.vimrc
+$ mkdir ~/.config
+$ git clone git@github.com:jonathan-fantham/vimfiles.git ~/.config/nvim
 ```
 
 #### Install vim-plug.
