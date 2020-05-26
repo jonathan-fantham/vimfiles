@@ -1,11 +1,13 @@
 call plug#begin()
 
+Plug 'sirver/ultisnips'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
+Plug 'honza/vim-snippets'
 Plug 'leafgarland/typescript-vim'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
@@ -37,14 +39,15 @@ set expandtab
 " autocmd Filetype css setlocal noexpandtab
 
 set backspace=2 " make backspace work like most other apps
-set hlsearch
-set incsearch
 set nofoldenable " turn off folding
 set hidden " prevent unsaved warnings when switching buffers
 set autoread " autoload files when they're changed underneath vim
 
-" ignore case when searching
-set ignorecase
+" searching config
+set ignorecase " ignore case
+set hlsearch " highlight the search terms
+set incsearch " search while typing
+set nowrapscan " do not wrap to the beginning of the file from the last match
 
 " always show the file name at the bottom
 set laststatus=2
@@ -62,7 +65,7 @@ set noswapfile
 set re=1
 
 " use hybrid line numbers
-set nu rnu
+set nu
 
 nmap , <leader>
 nmap ,, <leader><leader>
@@ -113,6 +116,9 @@ if executable("goimports")
   let g:go_fmt_command = "goimports"
 endif
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 " clear unwanted whitespace
 map <silent> <LocalLeader>w :FixWhitespace<CR>
 
@@ -125,6 +131,9 @@ runtime! macros/matchit.vim
 " set list
 set listchars=tab:→\ ,nbsp:␣,space:·
 
+" Automatic line wrapping
+set textwidth=100
+
 " Linting (there is also further config in ftplugin folder)
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
@@ -136,6 +145,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+
 
 syntax on
 colorscheme seoul256
