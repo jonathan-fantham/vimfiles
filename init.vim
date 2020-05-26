@@ -64,8 +64,11 @@ set noswapfile
 " use old regular expression engine for ruby plugin
 set re=1
 
-" use hybrid line numbers
+" use line numbers
 set nu
+
+" use relative line numbers
+" set rnu
 
 nmap , <leader>
 nmap ,, <leader><leader>
@@ -151,6 +154,16 @@ let g:go_highlight_build_constraints = 1
 syntax on
 colorscheme seoul256
 set background=dark
-" highlight Normal ctermbg=None
+
+" Remove vim background color and just use shell background
+highlight Normal ctermbg=None
+
+" Remove background color on line numbers
+highlight LineNr ctermbg=None
+highlight LineNr ctermfg=240
+
+" Remove background from vertical split in between document and NerdTree
+highlight VertSplit cterm=None ctermbg=None ctermfg=240
+
 " hi Search ctermbg=045
 " hi visual term=reverse ctermbg=white
