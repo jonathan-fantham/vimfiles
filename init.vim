@@ -65,7 +65,7 @@ set noswapfile
 set re=1
 
 " use line numbers
-set nu
+set nu rnu
 
 " use relative line numbers
 " set rnu
@@ -148,8 +148,6 @@ let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
-
 
 syntax on
 colorscheme seoul256
